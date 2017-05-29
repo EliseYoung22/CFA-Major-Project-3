@@ -6,23 +6,24 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
 
     <form action="/"  method="post">
       <input type="text" name="brand_name" placeholder="Brand name">
-      <input type="submit">
       <input type="text" name="brand_ethical" placeholder="Ethical?">
-      <input type="submit">
       <input type="text" name="brand_sustainable" placeholder="Sustainable?">
-      <input type="submit">
       <input type="text" name="brand_description" placeholder="Description">
-      <input type="submit">
       <input type="text" name="brand_certificates" placeholder="Certificates">
       <input type="submit">
     </form>
     <ul>
       <% brand.forEach(brand => { %>
-        <li><%= brand.name %></li>
+        =====================================
+        <li>Name=<%= brand.name %></li>
+        <li>Ethical=<%= brand.ethical %></li>
+        <li>Sustainable=<%= brand.sustainable %></li>
+        <li>Description=<%= brand.description %></li>
+        <li>Certificates=<%= brand.certificates %></li>
+
       <% }) %>
     </ul>
   </body>

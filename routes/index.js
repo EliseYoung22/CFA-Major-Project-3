@@ -7,7 +7,7 @@ const Brand = require('../models/Brand')
 // });
 router.get('/', function(req, res, next) {
   Brand.find()
-  .then(brands => {
+  .then(brand => {
     res.render('index', {
       title: 'Brands',
       brand: brand,
