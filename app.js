@@ -14,8 +14,8 @@ var app = express();
 
 //database
 var mongoose = require('mongoose');
-// mongoose.connect(process.env.FASHION_MLAB);
-mongoose.connect('mongodb://localhost/fashion');
+mongoose.connect(process.env.FASHION_MLAB);
+// mongoose.connect('mongodb://localhost/fashion');
 
 const {connection: db} = mongoose;
 db.on('error', console.error.bind(console, 'connection error:'));
