@@ -6,13 +6,13 @@ const apibrandController = require ('../controllers/apibrandController');
 
 router.get('/', apibrandController.getBrandApi);
 
-router.post('/', apibrandController.postBrandApi);
-
-router.get('/:id', apibrandController.getEditBrandApi);
-
-router.post('/:id/edit', apibrandController.updateBrandApi);
-
-router.delete('/:id/delete', apibrandController.deleteBrandApi);
+// router.post('/brand', apibrandController.postBrandApi);
+//
+// router.get('/brand/:id', apibrandController.getEditBrandApi);
+//
+// router.post('/brand/:id/edit', apibrandController.updateBrandApi);
+//
+// router.delete('/:id/delete', apibrandController.deleteBrandApi);
 
 
 module.exports = router;

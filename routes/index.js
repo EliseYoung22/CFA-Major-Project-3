@@ -20,7 +20,7 @@ router.post('/brand/:id/edit', brandController.updateBrand);
 
 
 //DELETE
-router.delete('/brand/:id/delete', brandController.deleteBrand);
+router.get('/brand/:id/delete', brandController.deleteBrand);
 
 
 

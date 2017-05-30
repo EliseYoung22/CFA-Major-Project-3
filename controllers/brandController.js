@@ -50,8 +50,9 @@ exports.updateBrand = (req, res) => {
 
 
 exports.deleteBrand = (req, res) => {
-  Brand.findByIdAndRemove(req.params.id)
-    .then(() => {
-      res.redirect('/');
-    });
+	Brand.findByIdAndRemove({_id: req.params.id},
+	   function(err){
+		  if(err) res.json(err);
+		   else    res.redirect('/');
+	});
 };
