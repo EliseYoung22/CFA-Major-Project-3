@@ -13,6 +13,7 @@
       <input type="text" name="brand_sustainable" placeholder="Sustainable?">
       <textarea type="text" name="brand_description" placeholder="Description"></textarea>
       <textarea type="text" name="brand_certificates" placeholder="Certificates"></textarea>
+      <textarea type="text" name="brand_link" placeholder="Link"></textarea>
       <input type="submit">
     </form>
     <ul>
@@ -23,6 +24,7 @@
         <li>Sustainable=<%= brand.sustainable %></li>
         <li>Description=<%= brand.description %></li>
         <li>Certificates=<%= brand.certificates %></li>
+        <li>Link=<%= brand.link %></li>
         <a href="/brand/<%= brand._id %>/edit">Edit</a>
         <a href="/brand/<%= brand._id %>/delete">Delete</a></li>
       <% }) %>

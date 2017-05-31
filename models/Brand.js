@@ -23,6 +23,10 @@ const brandSchema = new Schema ({
     type: String,
     trim: true
   },
+  link: {
+    type: String,
+    trim: true
+  },
   created_at: {
     type: Date,
     default: Date.now

@@ -18,12 +18,16 @@ exports.postBrand = (req, res) => {
   const sustainable = req.body.brand_sustainable;
   const description = req.body.brand_description;
   const certificates = req.body.brand_certificates;
+  const link = req.body.brand_link;
+
   let brand = new Brand();
   brand.name = name;
   brand.ethical = ethical;
   brand.sustainable = sustainable;
   brand.description = description;
   brand.certificates = certificates;
+  brand.link = link;
+
   brand.save()
   .then(() => {
     res.redirect('/')
