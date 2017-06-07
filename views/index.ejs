@@ -7,13 +7,14 @@
   <body>
     <h1><%= title %></h1>
 
-    <form action="/"  method="post">
+    <form action="/"  method="post" enctype="multipart/form-data">
       <input type="text" name="brand_name" placeholder="Brand name">
       <input type="text" name="brand_ethical" placeholder="Ethical?">
       <input type="text" name="brand_sustainable" placeholder="Sustainable?">
       <textarea type="text" name="brand_description" placeholder="Description"></textarea>
       <textarea type="text" name="brand_certificates" placeholder="Certificates"></textarea>
       <input type="text" name="brand_link" placeholder="Link"></input>
+      <input type="file" name="file" />
       <input type="submit">
     </form>
     <ul>
@@ -25,6 +26,8 @@
         <li>Description=<%= brand.description %></li>
         <li>Certificates=<%= brand.certificates %></li>
         <li>Link=<%= brand.link %></li>
+        <li>Logo=<%= brand.file %></li>
+
         <a href="/brand/<%= brand._id %>/edit">Edit</a>
         <a href="/brand/<%= brand._id %>/delete">Delete</a></li>
       <% }) %>
