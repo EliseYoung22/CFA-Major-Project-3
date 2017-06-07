@@ -27,6 +27,10 @@ const brandSchema = new Schema ({
     type: String,
     trim: true
   },
+  file: {
+    type: Buffer,
+    contentType: String
+  },
   created_at: {
     type: Date,
     default: Date.now
