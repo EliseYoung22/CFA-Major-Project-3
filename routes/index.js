@@ -9,6 +9,12 @@ router.get('/', brandController.getBrand);
 //POST
 router.post('/', brandController.postBrand);
 
+router.post('/files/:id',
+  brandController.postBrand
+);
+
+router.get('/files/:id', brandController.getBrandById);
+
 
 //GET-Edit
 router.get('/brand/:id/edit',  brandController.getEditBrand);

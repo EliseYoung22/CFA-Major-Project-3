@@ -15,6 +15,26 @@ exports.getBrand = (req, res) => {
     })
   })
 };
+
+// exports.getBrandById = async (req, res) => {
+//   try {
+//     const brand = await Brand.findOne({ _id: req.params.id })
+//       .populate('name');
+//     res.setHeader('Content-Type', 'image/png');
+//     res.send(brand.file);
+//   } catch(err) {
+//     throw Error(err);
+//   };
+// };
+exports.getBrandById = (req,res) => {
+  Brand.findById({_id: req.params.id})
+    .then((brand)=>{
+      res.setHeader('Content-Type', 'image/png')
+      res.send(brand.file)
+    })
+}
+
+
 exports.postBrand = (req, res, next) => {
   let form = new formidable.IncomingForm();
 

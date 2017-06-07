@@ -26,7 +26,11 @@
         <li>Description=<%= brand.description %></li>
         <li>Certificates=<%= brand.certificates %></li>
         <li>Link=<%= brand.link %></li>
-        <li>Logo=<%= brand.file %></li>
+
+        <li><a href="/files/<%= brand._id%>">
+        <img src="/files/<%= brand._id%>" class="thumbnail" />
+        </a></li>
+
 
         <a href="/brand/<%= brand._id %>/edit">Edit</a>
         <a href="/brand/<%= brand._id %>/delete">Delete</a></li>
