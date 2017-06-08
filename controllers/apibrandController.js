@@ -8,12 +8,15 @@ exports.getBrandApi = (req, res) => {
   })
 };
 
-exports.getBrandApiFileById = (req, res) => {
-  Brand.findOne({ _id: req.params.id })
-  .then((file) => {
-      res.json(file);
-  })
-};
+
+exports.getApiFileById = (req, res) => {
+ Brand.findOne({ _id: req.params.id })
+    .then((brand) => {
+      res.json(brand);
+    })
+}
+
+
 
 
 //

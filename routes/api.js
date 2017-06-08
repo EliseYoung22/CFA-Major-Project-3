@@ -6,7 +6,9 @@ const apibrandController = require ('../controllers/apibrandController');
 
 router.get('/', apibrandController.getBrandApi);
 
-router.get('/files/:id', apibrandController.getBrandApiFileById);
+
+router.get('/files/:id', apibrandController.getApiFileById);
+
 
 // router.post('/brand', apibrandController.postBrandApi);
 //
