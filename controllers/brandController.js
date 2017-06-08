@@ -57,7 +57,11 @@ exports.postBrand = (req, res, next) => {
           return;
         }
         console.log(data.length)
-        Brand.create({ name: fields.name, ethical:fields.ethical, file: data, sustainable:fields.sustainable, description:fields.description, certificates:fields.certificates }, function(error) {
+        Brand.create({
+           name: fields.name,
+           ethical:fields.ethical,
+           file: data,
+           sustainable:fields.sustainable, description:fields.description, certificates:fields.certificates }, function(error) {
           if(err) {
             console.log('Upload failed...');
             return;
