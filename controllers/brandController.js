@@ -61,6 +61,7 @@ exports.postBrand = (req, res, next) => {
            name: fields.name,
            ethical:fields.ethical,
            file: data,
+           link: fields.link,
            sustainable:fields.sustainable, description:fields.description, certificates:fields.certificates, image:fields.image }, function(error) {
           if(err) {
             console.log('Upload failed...');
