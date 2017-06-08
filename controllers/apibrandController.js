@@ -7,6 +7,15 @@ exports.getBrandApi = (req, res) => {
         res.json(brand)
   })
 };
+
+exports.getBrandApiFileById = (req, res) => {
+  Brand.findOne({ _id: req.params.id })
+  .then((file) => {
+      res.json(file);
+  })
+};
+
+
 //
 // exports.postBrandApi = (req, res) => {
 //   console.log('req: ', req)
